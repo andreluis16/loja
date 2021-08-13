@@ -8,10 +8,11 @@ $smarty = new Template();
 
 //Template values
 
-$smarty->assign('NOME', 'ANDRÈ LUIS');  
+ 
 $smarty->assign('GET_TEMPLATE', Routes::getSiteTemplate());
 $smarty->assign('GET_HOME', Routes::getSiteHome());
 $smarty->assign('PAGE_CART', Routes::cartPage());
+$smarty->assign('PAGE_PRODUCTS', Routes::productsPage());
 $smarty->assign('PAGE_CONTACT', Routes::contactPage());
 $smarty->assign('PAGE_MYACCOUNT', Routes::myAccountPage());
 $smarty->assign('TITLE', Config::SITE_NAME);

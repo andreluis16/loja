@@ -828,7 +828,8 @@ function display_error ($errorString = '') {
 
     header ('HTTP/1.1 400 Bad Request');
 	//echo '<pre>' . htmlentities ($errorString);
-	echo '<h3>Erro no sistema de imagens</h3>';
+	echo '<h3>Erro no sistema de imagens </h3>' ;
+        echo $errorString;
 	//echo '<br /></pre>';
 	//echo '<br />TimThumb version : ' . VERSION . '</pre>';
     die ();

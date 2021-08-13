@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-08-11 19:38:52
+/* Smarty version 3.1.39, created on 2021-08-13 00:23:09
   from '/var/www/html/view/index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6114274cee22a4_58084881',
+  'unifunc' => 'content_6115bb6d03d203_21230182',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '826d15d84a851e72285a258ea3c4994382ec3be8' => 
     array (
       0 => '/var/www/html/view/index.tpl',
-      1 => 1628710728,
+      1 => 1628814185,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6114274cee22a4_58084881 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6115bb6d03d203_21230182 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 
 <html>
@@ -102,7 +102,8 @@ function content_6114274cee22a4_58084881 (Smarty_Internal_Template $_smarty_tpl)
                             <ul class="nav navbar-nav">
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['GET_HOME']->value;?>
 "><i class="glyphicon glyphicon-home"></i> Home </a> </li>
-                               
+                               <li><a href="<?php echo $_smarty_tpl->tpl_vars['PAGE_PRODUCTS']->value;?>
+"><i class="glyphicon glyphicon-tag"></i> Produtos </a> </li>
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['PAGE_MYACCOUNT']->value;?>
 "><i class="glyphicon glyphicon-user"></i> Minha Conta </a> </li>
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['PAGE_CART']->value;?>

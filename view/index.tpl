@@ -60,7 +60,7 @@
                         <div class="collapse navbar-collapse" id="navbar">
                             <ul class="nav navbar-nav">
                                 <li><a href="{$GET_HOME}"><i class="glyphicon glyphicon-home"></i> Home </a> </li>
-                               
+                               <li><a href="{$PAGE_PRODUCTS}"><i class="glyphicon glyphicon-tag"></i> Produtos </a> </li>
                                 <li><a href="{$PAGE_MYACCOUNT}"><i class="glyphicon glyphicon-user"></i> Minha Conta </a> </li>
                                 <li><a href="{$PAGE_CART}"><i class="glyphicon glyphicon-shopping-cart"></i> Carrinho </a> </li>
                                 <li><a href="{$PAGE_CONTACT}" ><i class="glyphicon glyphicon-envelope"></i> Contato </a> </li>
