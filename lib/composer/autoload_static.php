@@ -46,11 +46,13 @@ class ComposerStaticInit42788d444fa9ae86b8c480327fb48232
 
     public static $classMap = array (
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
+        'Categories' => __DIR__ . '/../..' . '/models/Categories.class.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Config' => __DIR__ . '/../..' . '/models/Config.class.php',
-        'Connection' => __DIR__ . '/../..' . '/models/Conexao.class.php',
+        'Connection' => __DIR__ . '/../..' . '/models/Connection.class.php',
         'Products' => __DIR__ . '/../..' . '/models/Products.class.php',
         'Routes' => __DIR__ . '/../..' . '/models/Routes.class.php',
+        'Sistema' => __DIR__ . '/../..' . '/models/Sistema.class.php',
         'Smarty' => __DIR__ . '/..' . '/smarty/smarty/libs/Smarty.class.php',
         'SmartyBC' => __DIR__ . '/..' . '/smarty/smarty/libs/SmartyBC.class.php',
         'SmartyCompilerException' => __DIR__ . '/..' . '/smarty/smarty/libs/sysplugins/smartycompilerexception.php',

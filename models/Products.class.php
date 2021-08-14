@@ -7,7 +7,7 @@ class Products extends Connection{
     
     function GetProducts(){
         //query para buscar produtos de uma categoria especifica
-        $query = "SELECT * FROM {$this->prefix}produtos p INNER JOIN {$this->prefix} categorias c ON p.pro_categoria = c.cate_id";
+        $query = "SELECT * FROM {$this->prefix}produtos p INNER JOIN {$this->prefix}categorias c ON p.pro_categoria = c.cate_id";
         $query .= " ORDER BY pro_id DESC";
         
         $this->ExecuteSQL($query);
@@ -16,12 +16,25 @@ class Products extends Connection{
     
     function GetProductsID($id){
         //query para buscar produtos de uma categoria especifica
-        $query = "SELECT * FROM {$this->prefix}produtos p INNER JOIN {$this->prefix} categorias c ON p.pro_categoria = c.cate_id";
-            $query .= " AND pro_id = {$id}";
+        $query = "SELECT * FROM {$this->prefix}produtos p INNER JOIN {$this->prefix}categorias c ON p.pro_categoria = c.cate_id";
+        $query .= " AND pro_id = :id";
         
-        $this->ExecuteSQL($query);
+        $params = array(':id'=>(int)$id);  
+        
+        $this->ExecuteSQL($query, $params);
         $this->GetList();
     }
+    
+    function GetProductsCateID($id){
+        //query para buscar produtos de uma categoria especifica
+        $query = "SELECT * FROM {$this->prefix}produtos p INNER JOIN {$this->prefix}categorias c ON p.pro_categoria = c.cate_id";
+        $query .= " AND pro_categoria = :id";
+        
+        $params = array(':id'=>(int)$id); 
+        
+        $this->ExecuteSQL($query, $params);
+        $this->GetList();
+    }   
     
     private function GetList(){
         $i = 1;
@@ -31,7 +44,7 @@ class Products extends Connection{
             'pro_nome'  => $list['pro_nome'] ,  
             'pro_desc'  => $list['pro_desc'] ,  
             'pro_peso'  => $list['pro_peso'] ,  
-            'pro_valor'   => $list['pro_valor']  ,  
+            'pro_valor'   => Sistema::MoedaBR($list['pro_valor']),  
             'pro_altura' => $list['pro_altura'] ,  
             'pro_largura' => $list['pro_largura'] ,  
             'pro_comprimento' => $list['pro_comprimento'] ,  

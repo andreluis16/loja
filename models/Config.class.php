@@ -15,7 +15,7 @@ class Config{
     const DB_USER = "root";
     const DB_SENHA = "12345";
     const DB_BANCO = "loja";
-    const DB_PREFIX = "";
+    const DB_PREFIX = "fs_";
     
     //PHP MAILER INFO
     

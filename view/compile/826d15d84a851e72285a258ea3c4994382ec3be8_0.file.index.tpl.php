@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-08-13 00:23:09
+/* Smarty version 3.1.39, created on 2021-08-14 16:11:15
   from '/var/www/html/view/index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6115bb6d03d203_21230182',
+  'unifunc' => 'content_6117eb23915095_54978988',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '826d15d84a851e72285a258ea3c4994382ec3be8' => 
     array (
       0 => '/var/www/html/view/index.tpl',
-      1 => 1628814185,
+      1 => 1628957454,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6115bb6d03d203_21230182 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6117eb23915095_54978988 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 
 <html>
@@ -145,15 +145,24 @@ function content_6115bb6d03d203_21230182 (Smarty_Internal_Template $_smarty_tpl)
                 <div class="list-group">
                     <span class="list-group-item active"> Categorias</span>
                     
-                    <a href="#" class="list-group-item"><span class="glyphicon glyphicon-menu-right"></span> Presentes</a> 
-                    <a href="#" class="list-group-item"><i class="glyphicon glyphicon-menu-right"></i> Brinquedos</a> 
+                     <a href="<?php echo $_smarty_tpl->tpl_vars['PAGE_PRODUCTS']->value;?>
+" class="list-group-item"><span class="glyphicon glyphicon-menu-right"></span> Todos</a>  
                     
-                    <a href="#" class="list-group-item"><span class="glyphicon glyphicon-menu-right"></span> Presentes</a> 
-                    <a href="#" class="list-group-item"><i class="glyphicon glyphicon-menu-right"></i> Brinquedos</a> 
+                    <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['CATEGORIES']->value, 'C');
+$_smarty_tpl->tpl_vars['C']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['C']->value) {
+$_smarty_tpl->tpl_vars['C']->do_else = false;
+?>
+                    <a href="<?php echo $_smarty_tpl->tpl_vars['C']->value['cate_link'];?>
+" class="list-group-item"><span class="glyphicon glyphicon-menu-right"></span> <?php echo $_smarty_tpl->tpl_vars['C']->value['cate_nome'];?>
+</a> 
                     
-                    <a href="#" class="list-group-item"><span class="glyphicon glyphicon-menu-right"></span> Presentes</a> 
-                    <a href="#" class="list-group-item"><i class="glyphicon glyphicon-menu-right"></i> Brinquedos</a> 
+                    <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                     
+                   
                     
                 </div><!--fim da list group-->              
                               
@@ -192,7 +201,9 @@ function content_6115bb6d03d203_21230182 (Smarty_Internal_Template $_smarty_tpl)
                 <center>
                     <h4><?php echo $_smarty_tpl->tpl_vars['TITLE']->value;?>
 </h4>
-                    <p>Todos os Direitos Reservados - André Luis Pereira - Dev</p>
+                    <p>Todos os Direitos Reservados - André Luis Pereira - Dev - Data atual: <?php echo $_smarty_tpl->tpl_vars['DATA']->value;?>
+</p>
+                    
                 </center>
             
             </div><!-- fim div rodape-->

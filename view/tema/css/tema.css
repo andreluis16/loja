@@ -85,3 +85,8 @@ a.list-group-item{
     
 }
 
+.thumbnail{
+    border-radius: 15px;
+    box-shadow: 6px 6px 10px #adadad;
+}
+

@@ -1,7 +1,9 @@
 <h3>Lista de produtos</h3>
 <hr>
 
- 
+{if $PRO_TOTAL < 1}
+    <h4 class="alert alert-danger">Nenhum produto encontrado!!</h4>
+{/if}
     <section id="pagincao" class="row">
        <center>
           PAGINAS
@@ -33,7 +35,7 @@
 
                         <h4 class="text-center"> {$P.pro_nome}</h4> 
 
-                        <h3 class="text-center text-danger">{$P.pro_valor}</h3>
+                        <h3 class="text-center text-danger">R$ {$P.pro_valor}</h3>
 
                     </div>
 

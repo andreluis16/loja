@@ -2,9 +2,9 @@
 
 class Connection extends Config{
     
-    private $host ,$user, $passWord, $dataBaseName, $prefix;
+    private $host ,$user, $passWord, $dataBaseName;
     
-    protected $obj, $items=array();
+    protected $obj, $items=array(), $prefix;
             
     function __construct(){
         $this->host = self::DB_HOST;
@@ -45,8 +45,16 @@ class Connection extends Config{
         return $link;        
     }
     
-    function ExecuteSQL($query, array $params = NULL){
+    function ExecuteSQL($query, array $params = array()){
+        
         $this->obj = $this->Connect()->prepare($query);
+        
+        if(count($params) > 0){
+            foreach ($params as $key => $value){
+                $this->obj->bindValue($key, $value);
+            }
+        }
+        
         return $this->obj->execute();
     }
     
@@ -61,6 +69,9 @@ class Connection extends Config{
     function GetItems(){
         return $this->items;
         
+    }
+    public function GetPrefix() {
+        return $this->prefix;
     }
     
 }

@@ -7,11 +7,13 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Attribute' => $vendorDir . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
+    'Categories' => $baseDir . '/models/Categories.class.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
     'Config' => $baseDir . '/models/Config.class.php',
-    'Connection' => $baseDir . '/models/Conexao.class.php',
+    'Connection' => $baseDir . '/models/Connection.class.php',
     'Products' => $baseDir . '/models/Products.class.php',
     'Routes' => $baseDir . '/models/Routes.class.php',
+    'Sistema' => $baseDir . '/models/Sistema.class.php',
     'Smarty' => $vendorDir . '/smarty/smarty/libs/Smarty.class.php',
     'SmartyBC' => $vendorDir . '/smarty/smarty/libs/SmartyBC.class.php',
     'SmartyCompilerException' => $vendorDir . '/smarty/smarty/libs/sysplugins/smartycompilerexception.php',

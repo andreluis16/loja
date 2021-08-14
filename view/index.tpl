@@ -99,15 +99,14 @@
                 <div class="list-group">
                     <span class="list-group-item active"> Categorias</span>
                     
-                    <a href="#" class="list-group-item"><span class="glyphicon glyphicon-menu-right"></span> Presentes</a> 
-                    <a href="#" class="list-group-item"><i class="glyphicon glyphicon-menu-right"></i> Brinquedos</a> 
+                     <a href="{$PAGE_PRODUCTS}" class="list-group-item"><span class="glyphicon glyphicon-menu-right"></span> Todos</a>  
                     
-                    <a href="#" class="list-group-item"><span class="glyphicon glyphicon-menu-right"></span> Presentes</a> 
-                    <a href="#" class="list-group-item"><i class="glyphicon glyphicon-menu-right"></i> Brinquedos</a> 
+                    {foreach from=$CATEGORIES item=C}
+                    <a href="{$C.cate_link}" class="list-group-item"><span class="glyphicon glyphicon-menu-right"></span> {$C.cate_nome}</a> 
                     
-                    <a href="#" class="list-group-item"><span class="glyphicon glyphicon-menu-right"></span> Presentes</a> 
-                    <a href="#" class="list-group-item"><i class="glyphicon glyphicon-menu-right"></i> Brinquedos</a> 
+                    {/foreach}
                     
+                   
                     
                 </div><!--fim da list group-->              
                               
@@ -145,7 +144,8 @@
             
                 <center>
                     <h4>{$TITLE}</h4>
-                    <p>Todos os Direitos Reservados - André Luis Pereira - Dev</p>
+                    <p>Todos os Direitos Reservados - André Luis Pereira - Dev - Data atual: {$DATA}</p>
+                    
                 </center>
             
             </div><!-- fim div rodape-->
