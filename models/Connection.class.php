@@ -5,6 +5,8 @@ class Connection extends Config{
     private $host ,$user, $passWord, $dataBaseName;
     
     protected $obj, $items=array(), $prefix;
+        
+    public $paginationLinks, $totalPages, $limit, $start;
             
     function __construct(){
         $this->host = self::DB_HOST;
@@ -70,8 +72,41 @@ class Connection extends Config{
         return $this->items;
         
     }
-    public function GetPrefix() {
+    public function GetPrefix(){
         return $this->prefix;
+    }
+    
+    public function PaginationLinks($field, $table){
+        $pag = new Pagination();
+        $pag->GetPagination($field, $table);
+        $this->paginationLinks = $pag->link;
+        
+        $this->totalPages = $pag->totalPages;
+        $this->limit = $pag->limit;
+        $this->start = $pag->start;
+        
+        if($this->totalPages > 0){
+            return " limit {$pag->start}, {$pag->limit}";
+        }else{
+            return "";
+        }
+        
+    }  
+    
+    protected function Pagination($pages = array()){
+        $pag = '<ul class="pagination">';
+        $pag .= '<li><a href="?p=1"> << Inicio</a></li>';
+        
+        foreach($pages as $p){
+            $pag .= '<li><a href="?p='.$p. '">'.$p. '</a></li>';
+        }
+        
+        $pag .= '</ul>';
+        return $pag;
+    }
+    
+    function ShowPagination(){
+        return $this->Pagination($this->paginationLinks);
     }
     
 }

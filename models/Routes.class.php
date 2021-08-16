@@ -51,28 +51,34 @@ class Routes {
            $image = self::getImageURL(). "thumb.php?src={$img}&w={$width}&h={$height}&zc=1";
            return $image;   
        }
+       
+       static function getFolderController() {
+           return self::$controllerFolder;
+       }
 
 
        static function getPage(){
-    if(isset($_GET['pag'])){
-        
-            $page = $_GET['pag'];
-            
-            self::$pag = explode('/',$page);    
-            
-        
-            $page = 'controller/' . self::$pag[0] . '.php';
-            //$page = 'controller/' . $_GET['pag'] . '.php';
-            
-            if(file_exists($page)){
-                
-                include $page;
-                
-            }else{
-            include 'erro.php';
-        }
-        
-      }
-    }
+            if(isset($_GET['pag'])){
+
+                $page = $_GET['pag'];
+
+                self::$pag = explode('/',$page);    
+
+
+                $page = 'controller/' . self::$pag[0] . '.php';
+                //$page = 'controller/' . $_GET['pag'] . '.php';
+
+                   if(file_exists($page)){
+
+                      include $page;  
+
+                    }else{
+                    include 'erro.php';
+                    }
+
+                }else {
+                  include 'home.php';
+                }
+       }
     
 }

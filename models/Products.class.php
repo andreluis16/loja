@@ -8,8 +8,11 @@ class Products extends Connection{
     function GetProducts(){
         //query para buscar produtos de uma categoria especifica
         $query = "SELECT * FROM {$this->prefix}produtos p INNER JOIN {$this->prefix}categorias c ON p.pro_categoria = c.cate_id";
+        
         $query .= " ORDER BY pro_id DESC";
         
+        $query .= $this->PaginationLinks("pro_id", $this->prefix."produtos");
+
         $this->ExecuteSQL($query);
         $this->GetList();
     }

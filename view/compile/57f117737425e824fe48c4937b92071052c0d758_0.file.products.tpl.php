@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-08-14 15:59:47
+/* Smarty version 3.1.39, created on 2021-08-16 18:32:59
   from '/var/www/html/view/products.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6117e873519ba5_71437245',
+  'unifunc' => 'content_611aaf5b1a7408_65152213',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '57f117737425e824fe48c4937b92071052c0d758' => 
     array (
       0 => '/var/www/html/view/products.tpl',
-      1 => 1628956783,
+      1 => 1629138767,
       2 => 'file',
     ),
   ),
@@ -20,19 +20,12 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6117e873519ba5_71437245 (Smarty_Internal_Template $_smarty_tpl) {
-?><h3>Lista de produtos</h3>
-<hr>
+function content_611aaf5b1a7408_65152213 (Smarty_Internal_Template $_smarty_tpl) {
+?><hr>
 
 <?php if ($_smarty_tpl->tpl_vars['PRO_TOTAL']->value < 1) {?>
     <h4 class="alert alert-danger">Nenhum produto encontrado!!</h4>
 <?php }?>
-    <section id="pagincao" class="row">
-       <center>
-          PAGINAS
-       </center>
-    </section>
-  
        
     <!--  começa lista de produtos  ---->   
   <section id="produtos" class="row">  
@@ -93,8 +86,9 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     
      <!--  paginação inferior   -->  
     <section id="pagincao" class="row">
-    <center>
-    PAGINAS
+    <center class="pagination">
+    <?php echo $_smarty_tpl->tpl_vars['PAGES']->value;?>
+
     </center>
     </section><?php }
 }

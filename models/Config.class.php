@@ -8,6 +8,7 @@ class Config{
     const SITE_FOLDER = "store";
     const SITE_NAME = "The first store - PHP 7 and Mysql";
     const SITE_EMAIL_ADM = "nobloko80@gmail.com";
+    const DB_LIMIT_PER_PAGE = 3;
 
     //DATABASE INFO
     

@@ -1,15 +1,8 @@
-<h3>Lista de produtos</h3>
 <hr>
 
 {if $PRO_TOTAL < 1}
     <h4 class="alert alert-danger">Nenhum produto encontrado!!</h4>
 {/if}
-    <section id="pagincao" class="row">
-       <center>
-          PAGINAS
-       </center>
-    </section>
-  
        
     <!--  começa lista de produtos  ---->   
   <section id="produtos" class="row">  
@@ -57,7 +50,7 @@
     
      <!--  paginação inferior   -->  
     <section id="pagincao" class="row">
-    <center>
-    PAGINAS
+    <center class="pagination">
+    {$PAGES}
     </center>
     </section>

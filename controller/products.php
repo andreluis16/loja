@@ -13,6 +13,7 @@
     $smarty->assign('PRO', $products->GetItems());
     $smarty->assign('PRO_INFO', Routes::productsInfoPage());
     $smarty->assign('PRO_TOTAL', $products->TotalData());
+    $smarty->assign('PAGES', $products->ShowPagination());
     $smarty->display('products.tpl');
     
    

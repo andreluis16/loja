@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-08-11 21:39:33
+/* Smarty version 3.1.39, created on 2021-08-15 17:40:03
   from '/var/www/html/view/products_info.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_61144395ddcb15_84275832',
+  'unifunc' => 'content_611951739b9320_24128871',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'bd4f753ef0bf59397a53aa74fa3ddb077cef0e86' => 
     array (
       0 => '/var/www/html/view/products_info.tpl',
-      1 => 1628717971,
+      1 => 1629049145,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_61144395ddcb15_84275832 (Smarty_Internal_Template $_smarty_tpl) {
+function content_611951739b9320_24128871 (Smarty_Internal_Template $_smarty_tpl) {
 ?>     <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['PRO']->value, 'P');
 $_smarty_tpl->tpl_vars['P']->do_else = true;
@@ -86,13 +86,22 @@ $_smarty_tpl->tpl_vars['P']->do_else = false;
               <h4 class="text-center">Mais imagens</h4>
 
               <ul style="list-style: none">
-                 
+                 <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['IMAGES']->value, 'I');
+$_smarty_tpl->tpl_vars['I']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['I']->value) {
+$_smarty_tpl->tpl_vars['I']->do_else = false;
+?>
 
                       <li class="col-md-3 ">
-                          <img src="" alt="" class="thumbnail">
+                          <img src="<?php echo $_smarty_tpl->tpl_vars['I']->value['img_nome'];?>
+" alt="" class="thumbnail">
 
 
                       </li>
+                 <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>     
 
                  
               </ul>

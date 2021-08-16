@@ -55,13 +55,14 @@
               <h4 class="text-center">Mais imagens</h4>
 
               <ul style="list-style: none">
-                 
+                 {foreach from=$IMAGES item=I}
 
                       <li class="col-md-3 ">
-                          <img src="" alt="" class="thumbnail">
+                          <img src="{$I.img_nome}" alt="" class="thumbnail">
 
 
                       </li>
+                 {/foreach}     
 
                  
               </ul>

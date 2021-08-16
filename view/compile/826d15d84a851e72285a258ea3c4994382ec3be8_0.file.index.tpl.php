@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-08-14 16:11:15
+/* Smarty version 3.1.39, created on 2021-08-15 18:10:23
   from '/var/www/html/view/index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6117eb23915095_54978988',
+  'unifunc' => 'content_6119588f587ff9_58433423',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '826d15d84a851e72285a258ea3c4994382ec3be8' => 
     array (
       0 => '/var/www/html/view/index.tpl',
-      1 => 1628957454,
+      1 => 1629051019,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6117eb23915095_54978988 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6119588f587ff9_58433423 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 
 <html>
@@ -70,8 +70,8 @@ function content_6117eb23915095_54978988 (Smarty_Internal_Template $_smarty_tpl)
             <div class="row" id="topo">
                  
                 
-                <div class="container">
-                <img src="<?php echo $_smarty_tpl->tpl_vars['GET_TEMPLATE']->value;?>
+                <div class="imagem" >
+                <img class="img-logo" src="<?php echo $_smarty_tpl->tpl_vars['GET_TEMPLATE']->value;?>
 /images/logo.png" alt=""> 
                        
                 </div>    
@@ -100,7 +100,7 @@ function content_6117eb23915095_54978988 (Smarty_Internal_Template $_smarty_tpl)
                         
                         <div class="collapse navbar-collapse" id="navbar">
                             <ul class="nav navbar-nav">
-                                <li><a href="<?php echo $_smarty_tpl->tpl_vars['GET_HOME']->value;?>
+                                <li><a href="<?php echo $_smarty_tpl->tpl_vars['GET_SITE_HOME']->value;?>
 "><i class="glyphicon glyphicon-home"></i> Home </a> </li>
                                <li><a href="<?php echo $_smarty_tpl->tpl_vars['PAGE_PRODUCTS']->value;?>
 "><i class="glyphicon glyphicon-tag"></i> Produtos </a> </li>

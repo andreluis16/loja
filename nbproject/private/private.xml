@@ -3,13 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/andre/projects/loja/index.php</file>
             <file>file:/home/andre/projects/loja/view/index.tpl</file>
-            <file>file:/home/andre/projects/loja/controller/products.php</file>
+            <file>file:/home/andre/projects/loja/view/tema/css/tema.css</file>
             <file>file:/home/andre/projects/loja/view/products.tpl</file>
-            <file>file:/home/andre/projects/loja/models/Products.class.php</file>
-            <file>file:/home/andre/projects/loja/models/Categories.class.php</file>
-            <file>file:/home/andre/projects/loja/models/Conexao.class.php</file>
         </group>
     </open-files>
 </project-private>
