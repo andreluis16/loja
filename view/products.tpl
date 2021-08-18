@@ -50,7 +50,7 @@
     
      <!--  paginação inferior   -->  
     <section id="pagincao" class="row">
-    <center class="pagination">
+    <center>
     {$PAGES}
     </center>
     </section>

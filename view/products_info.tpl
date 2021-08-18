@@ -27,10 +27,10 @@
         </div>
       
         <div class="col-md-6">
-            <form name="carrinho" method="post" action="">
+            <form name="carrinho" method="post" action="{$PAGE_BUY}">
                 <input type="hidden" name="pro_id" value="{$P.pro_id}">
                 <input type="hidden" name="acao" value="add">
-            <button  class="btn btn-geral btn-lg">Comprar</button>
+            <button  class="btn btn-success btn-lg">Comprar</button>
              </form> 
             
         </div>

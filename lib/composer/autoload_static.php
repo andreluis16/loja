@@ -46,6 +46,7 @@ class ComposerStaticInit42788d444fa9ae86b8c480327fb48232
 
     public static $classMap = array (
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
+        'Cart' => __DIR__ . '/../..' . '/models/Cart.class.php',
         'Categories' => __DIR__ . '/../..' . '/models/Categories.class.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Config' => __DIR__ . '/../..' . '/models/Config.class.php',

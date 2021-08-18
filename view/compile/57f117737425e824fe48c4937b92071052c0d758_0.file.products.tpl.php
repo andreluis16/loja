@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-08-16 18:32:59
+/* Smarty version 3.1.39, created on 2021-08-16 19:20:11
   from '/var/www/html/view/products.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_611aaf5b1a7408_65152213',
+  'unifunc' => 'content_611aba6bda4ca4_81384929',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '57f117737425e824fe48c4937b92071052c0d758' => 
     array (
       0 => '/var/www/html/view/products.tpl',
-      1 => 1629138767,
+      1 => 1629141606,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_611aaf5b1a7408_65152213 (Smarty_Internal_Template $_smarty_tpl) {
+function content_611aba6bda4ca4_81384929 (Smarty_Internal_Template $_smarty_tpl) {
 ?><hr>
 
 <?php if ($_smarty_tpl->tpl_vars['PRO_TOTAL']->value < 1) {?>
@@ -86,7 +86,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     
      <!--  paginação inferior   -->  
     <section id="pagincao" class="row">
-    <center class="pagination">
+    <center>
     <?php echo $_smarty_tpl->tpl_vars['PAGES']->value;?>
 
     </center>

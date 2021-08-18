@@ -101,8 +101,14 @@ class Connection extends Config{
             $pag .= '<li><a href="?p='.$p. '">'.$p. '</a></li>';
         }
         
+        $pag .= '<li><a href="?p='. $this->totalPages .'">...'. $this->totalPages .'>> </a></li>';
+        
         $pag .= '</ul>';
-        return $pag;
+        
+        if($this->totalPages > 1){
+            return $pag;    
+        }
+        
     }
     
     function ShowPagination(){

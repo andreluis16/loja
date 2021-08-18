@@ -15,10 +15,24 @@ class Pagination extends Connection{
         
         $p = (int)isset($_GET['p']) ? $_GET['p'] : 1;
         
+        if($p > $pages){
+            $p = $pages;    
+        }
+        
         //TEST IN PRATICE
         $this->start = ($p * $this->limit) - $this->limit; 
         
-        for($i = 1; $i <= $pages; $i++){
+        $tolerance = 4;
+        $show = $p + $tolerance;
+        if($show > $pages){
+            $show = $pages;
+        }
+                
+        
+        for($i = ($p - $tolerance); $i <= $show; $i++){
+            if($i < 1){
+                $i = 1;
+            }
             array_push($this->link, $i);
         }
     }

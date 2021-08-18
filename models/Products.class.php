@@ -30,8 +30,13 @@ class Products extends Connection{
     
     function GetProductsCateID($id){
         //query para buscar produtos de uma categoria especifica
+        
+        $id = filter_var($id, FILTER_SANITIZE_NUMBER_INT);
+        
         $query = "SELECT * FROM {$this->prefix}produtos p INNER JOIN {$this->prefix}categorias c ON p.pro_categoria = c.cate_id";
         $query .= " AND pro_categoria = :id";
+        
+         $query .= $this->PaginationLinks("pro_id", $this->prefix."produtos WHERE pro_categoria=".(int)$id);
         
         $params = array(':id'=>(int)$id); 
         
@@ -47,7 +52,8 @@ class Products extends Connection{
             'pro_nome'  => $list['pro_nome'] ,  
             'pro_desc'  => $list['pro_desc'] ,  
             'pro_peso'  => $list['pro_peso'] ,  
-            'pro_valor'   => Sistema::MoedaBR($list['pro_valor']),  
+            'pro_valor'   => Sistema::MoedaBR($list['pro_valor']),
+            'pro_valor_us'   => $list['pro_valor']  ,  
             'pro_altura' => $list['pro_altura'] ,  
             'pro_largura' => $list['pro_largura'] ,  
             'pro_comprimento' => $list['pro_comprimento'] ,  

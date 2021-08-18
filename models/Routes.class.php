@@ -23,6 +23,10 @@ class Routes {
            return self::getSiteHome() . '/cart' ;
        }
        
+        static function cartPageAlter(){
+           return self::getSiteHome() . '/cart_alter' ;
+       }
+            
        static function productsPage(){
            return self::getSiteHome() . '/products' ;
        }
