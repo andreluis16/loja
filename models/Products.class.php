@@ -44,6 +44,7 @@ class Products extends Connection{
         $this->GetList();
     }   
     
+    
     private function GetList(){
         $i = 1;
         while ($list = $this->DataList()){

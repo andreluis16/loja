@@ -3,9 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/andre/projects/loja/view/index.tpl</file>
-            <file>file:/home/andre/projects/loja/view/tema/css/tema.css</file>
-            <file>file:/home/andre/projects/loja/view/products.tpl</file>
+            <file>file:/home/andre/projects/loja/view/cart.tpl</file>
+            <file>file:/home/andre/projects/loja/models/Routes.class.php</file>
+            <file>file:/home/andre/projects/loja/controller/purchase_finish.php</file>
+            <file>file:/home/andre/projects/loja/controller/products_info.php</file>
+            <file>file:/home/andre/projects/loja/controller/purchase_confirm.php</file>
+            <file>file:/home/andre/projects/loja/view/products_info.tpl</file>
+            <file>file:/home/andre/projects/loja/controller/cart_alter.php</file>
+            <file>file:/home/andre/projects/loja/view/purchase_finish.tpl</file>
+            <file>file:/home/andre/projects/loja/models/Cart.class.php</file>
+            <file>file:/home/andre/projects/loja/view/purchase_confirm.tpl</file>
+            <file>file:/home/andre/projects/loja/controller/cart.php</file>
         </group>
     </open-files>
 </project-private>

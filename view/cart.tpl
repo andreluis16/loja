@@ -3,9 +3,7 @@
 <!-- botoes e opções de cima -->
 <section class="row">
     
-    <div class="col-md-4 ">
-        <a href="" class="btn btn-geral" title="">Comprar Mais</a>
-    </div>
+ 
     <div class="col-md-4">
         
     </div>
@@ -22,6 +20,10 @@
     <center>
     <table class="table table-bordered" style="width: 95%">
        
+        <tr>
+            <td colspan="6" align="right"><a href="{$PAGE_PRODUCTS}" class="btn btn-info" title="">Comprar Mais</a></td> 
+        </tr>
+        
         <tr class="text-danger bg-danger">
             <td></td> 
             <td>Produto</td> 
@@ -44,9 +46,9 @@
             <td> {$P.pro_qtd}  </td>
             <td>  {$P.pro_subTotal}</td>
             <td> 
-                <form name="carrinho_dell" method="post" action="">
+                <form name="carrinho_dell" method="post" action="{$PAGE_CART_ALTER}">
                   
-                    <input type="hidden" name="pro_id" value="">    
+                    <input type="hidden" name="pro_id" value="{$P.pro_id}">    
                     <input type="hidden" name="acao" value="del">    
                     
                     <button class="btn btn-danger btn-sm"> <i class="glyphicon glyphicon-minus"></i> </button>
@@ -82,24 +84,29 @@
             <!-- botão de limpar-->
             <div class="col-md-4 ">
 
-                <form name="limpar" method="post" action="">
-                    <input type="hidden" name="acao" value="limpar">
-                    <input type="hidden" name="pro_id" value="1">
-
+                <form name="clean" method="post" action="{$PAGE_CART_ALTER}">
+                        <input type="hidden" name="pro_id" value="1">
+                        <input type="hidden" name="acao" value="clean">
+                        
                     <button class="btn btn-danger btn-block"> <i class="glyphicon glyphicon-trash"></i> Limpar Tudo</button>
-
+                    <br>
+                   
+                </form> 
+                        
+                <form name="pedido_confirmar" id="pedido_confirmar" method="post" action="{$PAGE_CONFIRM}">        
+                    <button class="btn btn-success btn-block" type="submit">  <i class="glyphicon glyphicon-ok"></i> Confirmar Pedido </button>
                 </form>
-
+                    
             </div>
         </section>
                     <br>
                     <hr>
     
-                   
-           
+       
+            <div class="col-md-12" align="right">
            <!-- botão finalzar -->
-           <button class="btn btn-geral btn-block btn-lg" type="submit" >  <i class="glyphicon glyphicon-ok"></i> Confirmar Pedido </button>
            
+            </div>   
            
        </form>  
        

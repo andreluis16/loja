@@ -65,13 +65,13 @@ padding-top:30px;
 
 .list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover{
     
-   background-color: #556B2F; 
+   background-color: #222; 
     
 }
 
 a.list-group-item:hover{
     
-    background-color: #556B2F;
+    background-color: #222;
      color: #FFF;
      
     

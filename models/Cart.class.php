@@ -63,11 +63,14 @@ class Cart{
             $ACAO  = $_POST['acao'];
 
         }
+         echo $ACAO;   
+         dump($_POST);
         
-        switch ($ACAO) {
+        switch ($ACAO) {  
+            
             case 'add':
                 if(!isset($_SESSION['PRO'][$ID]['ID'])){
-                    $_SESSION['PRO'][$ID]['ID'];
+                    $_SESSION['PRO'][$ID]['ID'] =  $ID;
                     $_SESSION['PRO'][$ID]['NOME']  = $NOME;
 		    $_SESSION['PRO'][$ID]['VALOR'] = $VALOR;
 		    $_SESSION['PRO'][$ID]['VALOR_US'] = $VALOR_US;
@@ -75,20 +78,36 @@ class Cart{
 		    $_SESSION['PRO'][$ID]['QTD']   = $QTD;
 		    $_SESSION['PRO'][$ID]['IMG']   = $IMG;
 		    $_SESSION['PRO'][$ID]['LINK']  = $LINK;  
+                  
+                }else{
+                    $_SESSION['PRO'][$ID]['QTD']   += $QTD;
                 }
+              
 
                 break;
             case 'del':
-
-
-                break;
-
-            case 'limpar':
-
+                $this->DellCart($id);
+                  echo '<h4 class="alert alert-danger">Produto removido!</h4>';
 
                 break;
+
+            case 'clean':
+                $this->CleanCart();
+                echo '<h4 class="alert alert-danger">Produtos removido!</h4>';
+                
+                break;
+           
             
         }
+      
     }
     
+    private function DellCart($id){
+        unset($_SESSION['PRO'][$id]);
+    }
+    
+     function  CleanCart(){
+        unset($_SESSION['PRO']);
+    }
+      
 }

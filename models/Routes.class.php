@@ -43,6 +43,14 @@ class Routes {
            return self::getSiteHome() . '/myaccount' ;
        }
        
+       static function purchaseConfirmPage(){
+           return self::getSiteHome() . '/purchase_confirm' ;
+       }
+       static function purchaseFinishPage(){
+           return self::getSiteHome() . '/purchase_finish';
+       }
+
+
        static function getImageFolder(){
            return 'media/images/';
        }    
@@ -59,6 +67,13 @@ class Routes {
        static function getFolderController() {
            return self::$controllerFolder;
        }
+       
+       //REDIRECT METHOD
+        static function Redirect($time, $page){
+		$url = '<meta http-equiv="refresh" content="'.$time.'; url='. $page .'">';
+                echo $url;
+	}
+
 
 
        static function getPage(){
